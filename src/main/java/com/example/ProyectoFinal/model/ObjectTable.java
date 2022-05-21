@@ -15,6 +15,14 @@ import lombok.NoArgsConstructor;
 public class ObjectTable {
     private @Column("NOMBRE_OBJETO") String obj_name;
     private @Column("DESCRIPCION") String obj_desc;
+
+    public String getObjName() {
+        return obj_name;
+    }
+
+    public String getObjDesc() {
+        return obj_desc;
+    }
     
 }
 
