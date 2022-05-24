@@ -56,4 +56,26 @@ public class ObjectControllerTest {
         then(result.getBody()).isEqualTo(expectedResponse);
     }
 
+    @Test
+    public void given_endpoint_teams_in_object_list_when_call_then_Ok() {
+
+        //Given
+        String address = "http://localhost:" + port + "/api/v1/objects/list";
+
+        logger.info("Given Cumplido");
+
+        //When
+        ResponseEntity<Iterable<ObjectTable>> result =
+                restTemplate.exchange(
+                        address,
+                        HttpMethod.GET,
+                        null,
+                        new ParameterizedTypeReference<>() {
+                        }
+                );
+
+        //Then
+        then(result.getStatusCode()).isEqualTo(HttpStatus.OK);
+    }
+
 }

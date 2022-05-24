@@ -33,7 +33,7 @@ public class UserControllerTest {
     public static Logger logger = LoggerFactory.getLogger(UserControllerTest.class);
 
     @Test
-    public void given_endpoint_teams_in_User_when_call_then_Ok() {
+    public void given_endpoint_teams_in_user_when_call_then_Ok() {
 
         //Given
         String address = "http://localhost:" + port + "/api/v1/users";

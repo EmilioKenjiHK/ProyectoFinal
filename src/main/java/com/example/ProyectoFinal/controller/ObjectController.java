@@ -1,5 +1,8 @@
 package com.example.ProyectoFinal.controller;
 
+import java.util.List;
+
+import com.example.ProyectoFinal.model.ObjectDescTable;
 import com.example.ProyectoFinal.model.ObjectTable;
 import com.example.ProyectoFinal.service.ObjectService;
 
@@ -17,11 +20,19 @@ public class ObjectController {
     @Autowired
     private ObjectService objectService;
 
-    // Devices
     @GetMapping("/objects")
     public ResponseEntity<Iterable<ObjectTable>> getObjects() {
 
         var elements = objectService.getObjects();
+
+        return ResponseEntity.ok().body(elements);
+    }
+
+    @GetMapping("/objects/list")
+    public ResponseEntity<List<ObjectDescTable>> getObjectDesc() {
+        //logger.info("Llega aqui");
+
+        var elements = objectService.getObjectDesc();
 
         return ResponseEntity.ok().body(elements);
     }

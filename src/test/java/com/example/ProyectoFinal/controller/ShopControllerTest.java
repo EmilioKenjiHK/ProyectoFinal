@@ -33,7 +33,7 @@ public class ShopControllerTest {
     public static Logger logger = LoggerFactory.getLogger(ShopControllerTest.class);
 
     @Test
-    public void given_endpoint_teams_in_Shop_when_call_then_Ok() {
+    public void given_endpoint_teams_in_shop_when_call_then_Ok() {
 
         //Given
         String address = "http://localhost:" + port + "/api/v1/shop";

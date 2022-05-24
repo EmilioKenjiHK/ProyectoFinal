@@ -8,8 +8,9 @@
         <meta http-equiv=”Content-Type” content="text/html"; charset="UTF-8"/>
 
         <!-- CSS Bootstrap -->
-       
+        
         <link href = "./libs/boostrap.css" rel = "stylesheet">
+        <link href = "./libs/styles.css" rel = "stylesheet">
          
         <title>Tienda Virtual</title>
 
@@ -22,10 +23,6 @@
 
             .bg{
                 background-color: blanchedalmond;
-                text-align: center;
-            }
-
-            h1 {
                 text-align: center;
             }
 
@@ -56,24 +53,31 @@
     
           <div class="collapse navbar-collapse border border-2 justify-content-center" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="index.html">MENU PRINCIPAL</a>
+              <a class="nav-item nav-link" href="index.html">MENU PRINCIPAL</a>
               <a class="nav-item nav-link" href="shop.html">TIENDA</a>
               <a class="nav-item nav-link" href="contact.html">CONTACTO</a>
-              <a class="nav-item nav-link" href="opinion.html">OPINION</a>
+              <a class="nav-item nav-link active" href="opinion.html">OPINION</a>
             </div>
           </div>
         </nav>
 
-        <div class="modal-body">
-            <h1>Tenemos todo para tu mascota<h1>
-                <img class="item-image" src="./media/foto7.jpg">
-        </div>
+       
+        <form action = "send.html" method="post" id = "signup">
 
-        <div class = "modal-body text-center">
-            <h1>¿Eres admin?</h1>
-            <button type= "button" onclick = "window.location.href='login.html';" class = "btn btn-secondary">Login</button>
-        </div>
+            <h2 align="middle">Envianos Vuestra Opinión Aquí</h2>
 
+            <div class = "field">
+                <label for="opinion">Opinión:</label>
+                <input type = "text" id = "opinion" name = "opinion" size = "100" maxlength ="100">
+                <small></small>
+            </div>
+
+            <br>
+
+            <p align = "middle">
+                <button type= "button" id = "submit" class = "btn btn-primary">Enviar</button>
+            </p>
+        </form>
 
         <footer class="footer">
 
@@ -88,5 +92,8 @@
     </body>
 
     <!-- JS -->
+    <script src = "./libs/jquery.js"></script>
+    <script src = "./libs/bootstrap.js"></script>
+    <script src="./js/opinion.js"></script>
 
 </html>
